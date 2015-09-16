@@ -1,0 +1,27 @@
+﻿@model Banca.Models.Aluno
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Novo Aluno</h2>
+
+<div class="panel">
+
+    <form action="/Aluno/create" method="post">
+
+        <div class="form-group">
+            <label>Id</label>
+            <input class="form-control" type="text" id="Id" name="IdAluno" value="" />
+        </div>
+
+        <div class="form-group">
+            <label>Nome</label>
+            <input class="form-control" placeholder="Nome do Aluno"
+                   type="text" id="Name" name="NameAluno" value="" />
+        </div>
+
+       
+        <button type="submit" class="btn btn-default">Salvar</button>
+
+    </form>
+</div>

@@ -1,0 +1,34 @@
+﻿
+@model IEnumerable<Banca.Models.Aluno>
+@{
+    ViewBag.Title = "Alunos";
+}
+
+<h2>Alunos</h2>
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdAluno</td>
+                <td>@item.NameAluno</td>
+                <td><a href="~/Aluno/Delete/@item.IdAluno">Delete</a></td>
+                <td><a href="~/Aluno/Update/@item.IdAluno">Editar</a></td>
+
+            </tr>
+        }
+
+    </table>
+    <a href="~/Aluno/create">Novo Aluno</a>
+</div>

@@ -1,0 +1,32 @@
+﻿
+@model IEnumerable<Banca.Models.Professor>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Professor</h2>
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nome</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.IdProfessor</td>
+                <td>@item.NameProfessor</td>
+                
+                
+            </tr>
+        }
+
+    </table>
+  
+</div>
